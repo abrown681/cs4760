@@ -6,15 +6,15 @@ Time spent: **X** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+1. (Required) Vulnerability Name or ID: WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
+  - [ ] Summary: An attacker can use editor privaleges to inject web script using HTML code in a post.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [ ] Steps to recreate: As an author, create a post with the following html code: "<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>". Then, as an admin, hover over the link in the post. Once the admin hovers over the link, a javascript alert is executed and requires user action to disable.
+  - [ ] Affected source code: 
+    - [Link 1](https://klikki.fi/adv/wordpress3.html)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
