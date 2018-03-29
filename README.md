@@ -15,15 +15,15 @@ Time spent: **X** hours spent in total
   - [ ] Steps to recreate: As an author, create a post with the following html code: `"<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>"`. Then, as an admin, hover over the link in the post. Once the admin hovers over the link, a javascript alert is executed and requires user action to disable.
   - [ ] Affected source code: 
     - [Link 1](https://klikki.fi/adv/wordpress3.html)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+2. (Required) Vulnerability Name or ID: WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
+  - [ ] Summary: An attacker can upload an image with a file name that contains the instructions necessary to inject malicious JavaScript code into the web broswer.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.6.1
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: As an admin, upload an image with the following filename: `cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg` using a proxy. Then, navigate to the post as a viewer (in my case, I went to http://wpdistillery.vm/cengizhansahinsumofpwn/), which will cause the JavaScript code in the file name to be executed without the user's consent.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 2](https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
