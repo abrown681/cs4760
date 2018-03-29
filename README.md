@@ -12,7 +12,7 @@ Time spent: **X** hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: https://github.com/abrown681/cs4760/blob/master/Authenticated_Stored_Cross-Site_Scripting_(XSS).gif
-  - [ ] Steps to recreate: As an author, create a post with the following html code: <pre>"<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>"</pre>. Then, as an admin, hover over the link in the post. Once the admin hovers over the link, a javascript alert is executed and requires user action to disable.
+  - [ ] Steps to recreate: As an author, create a post with the following html code: `"<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>"`. Then, as an admin, hover over the link in the post. Once the admin hovers over the link, a javascript alert is executed and requires user action to disable.
   - [ ] Affected source code: 
     - [Link 1](https://klikki.fi/adv/wordpress3.html)
 1. (Required) Vulnerability Name or ID
