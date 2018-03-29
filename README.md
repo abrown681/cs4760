@@ -1,6 +1,6 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: 5 hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
@@ -29,7 +29,7 @@ Time spent: **X** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: https://github.com/abrown681/cs4760/blob/master/Disabling_Functionality_Cross-Site_Scripting_(XSS).gif
   - [ ] Steps to recreate: As any type of non-admin user, go to a post and create a comment using the following text: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>`
   - [ ] Affected source code:
     - [Link 3](https://klikki.fi/adv/wordpress2.html)
@@ -47,11 +47,9 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+Sorting through the large list of exploitable vulnerabilities and tyring to decipher which ones I would be able to reproduce was a bit of a challenge. For example, I came across a few vulnerabilities where I could not replicate the results of the proof due to broken links.
 
 ## License
-
-    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
