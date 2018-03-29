@@ -1,13 +1,13 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: 5 hours spent in total
+Time spent: 3 hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID: WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: An attacker can use editor privaleges to inject web script using HTML code in a post.
+  - [ ] Summary: An attacker can use editor privaleges to create a post containing specially formatted HTML that contains executable JavaScript code.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
@@ -30,7 +30,7 @@ Time spent: 5 hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: https://github.com/abrown681/cs4760/blob/master/Disabling_Functionality_Cross-Site_Scripting_(XSS).gif
-  - [ ] Steps to recreate: As any type of non-admin user, go to a post and create a comment using the following text: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>`
+  - [ ] Steps to recreate: As any type of non-admin user, go to a post and create a new comment using the following text: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>`. Then, as an admin, go to the post and view its comments. Certain functinionality will then be disabled (e.g. you will be unable to click on links and alerts will keep popping up.)
   - [ ] Affected source code:
     - [Link 3](https://klikki.fi/adv/wordpress2.html)
 
