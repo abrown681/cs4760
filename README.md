@@ -24,15 +24,15 @@ Time spent: **X** hours spent in total
   - [ ] Steps to recreate: As an admin, upload an image with the following filename: `cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg` using a proxy. Then, navigate to the post as a viewer (in my case, I went to http://wpdistillery.vm/cengizhansahinsumofpwn/), which will cause the JavaScript code in the file name to be executed without the user's consent.
   - [ ] Affected source code:
     - [Link 2](https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html)
-3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+3. (Required) Vulnerability Name or ID: WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
+  - [ ] Summary: Any type of user can inject JavaScript code into WordPress post comment and cause certain functionality to be disabled (including making links un-clickable) when the comment is viewed by an admin.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: As any type of non-admin user, go to a post and create a comment using the following text: `<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>`
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 3](https://klikki.fi/adv/wordpress2.html)
 
 ## Assets
 
